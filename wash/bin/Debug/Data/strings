@@ -1,0 +1,74 @@
+﻿WELSH:Windows Easy-Language Shell 1.0
+Error:
+Format mismatch!  Make sure you're not putting alphabetical characters in integer variables!
+Variable
+has not been declared yet.
+from
+quit
+exit
+Goodbye.
+I'm sorry, but the command was not found.
+could not be saved; perhaps, it has not been declared?
+Strings:
+Integers:
+File:
+Attributes:
+Couldn't obtain file attribute information.
+Access Control:
+Couldn't obtain file access information.
+Last Access:
+Couldn't obtain last access time.
+Last Write:
+Couldn't obtain last write time.
+Creation Time:
+Operation failed.  Double check your quotes - you might've missed one.
+Problem deleting file:
+File deleted successfully.
+File created successfully.
+Folder created successfully.
+Problem creating file:
+File is protected and cannot be deleted.
+Adding to document failed either by the file not bieng found, or argument mismatch.
+Text written to
+Script does not exist.
+(WISE ERROR): Label Not Found.
+(WISE WARNING): Batch File support is beta!  Do not use if you absolutly need your files to run!
+(WISE ERROR): Label already created.
+File protected.
+Copy of
+File copied.
+Can't go up one level here.
+Insert an easy to remember name for this file:
+Insert an alternate name for this file:
+Insert a second alternate name for this file:
+Do not use string variables in a calculator expression.
+You do not have the proper dependencies!  Make sure your system is up to date, and you have the .NET Framework 3.5 and SP 1 installed.
+Current Location:
+was saved successfully.
+Cannot find process.
+Process killed.
+Cannot kill process at the moment:
+Alias successfully created.
+Could not successfully create alias:
+File moved successfully.
+red
+blue
+yellow
+gray
+cyan
+green
+magenta
+white
+black
+day
+d
+hour
+h
+minute
+m
+second
+s
+date
+t
+clock
+c

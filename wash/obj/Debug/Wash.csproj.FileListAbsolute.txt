@@ -1,0 +1,5 @@
+C:\Users\Super User\Documents\Visual Studio 2008\Projects\wash\wash\bin\Debug\Wash.exe
+C:\Users\Super User\Documents\Visual Studio 2008\Projects\wash\wash\bin\Debug\Wash.pdb
+C:\Users\Super User\Documents\Visual Studio 2008\Projects\wash\wash\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Super User\Documents\Visual Studio 2008\Projects\wash\wash\obj\Debug\Wash.exe
+C:\Users\Super User\Documents\Visual Studio 2008\Projects\wash\wash\obj\Debug\Wash.pdb

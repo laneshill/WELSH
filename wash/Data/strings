@@ -1,0 +1,38 @@
+﻿WELSH Version Alpha
+Error:
+Format mismatch!  Make sure you're not putting alphabetical characters in integer variables!
+Variable
+has not been declared yet.
+from
+#LS ARGUMENTS
+-a
+-attributes
+-show_attributes
+-c
+-control
+-show_control_information
+-r
+-write_time
+-show_write_time
+-e
+-creation
+-show_creation_time
+-s
+-access
+-show_access_time
+-i
+-information
+-show_all_information
+#LS String
+A:
+C:
+WT:
+CT:
+AT:
+#Exit Arguments
+quit
+exit
+#EXIT RESULT
+Goodbye.
+#Command Not Found
+I'm sorry, but the command was not found.

@@ -1,0 +1,5 @@
+C:\Documents and Settings\LSH\My Documents\Visual Studio 2008\Projects\wash\wash\bin\Release\WELSH.exe
+C:\Documents and Settings\LSH\My Documents\Visual Studio 2008\Projects\wash\wash\bin\Release\WELSH.pdb
+C:\Documents and Settings\LSH\My Documents\Visual Studio 2008\Projects\wash\wash\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\LSH\My Documents\Visual Studio 2008\Projects\wash\wash\obj\Release\WELSH.exe
+C:\Documents and Settings\LSH\My Documents\Visual Studio 2008\Projects\wash\wash\obj\Release\WELSH.pdb
