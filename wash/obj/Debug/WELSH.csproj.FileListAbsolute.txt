@@ -40,3 +40,13 @@ C:\Users\LaneS.Hill\wash\wash\obj\Debug\WELSH.exe.manifest
 C:\Users\LaneS.Hill\wash\wash\obj\Debug\WELSH.application
 C:\Users\Lane\Documents\wash\wash\obj\Debug\WELSH.exe
 C:\Users\Lane\Documents\wash\wash\obj\Debug\WELSH.pdb
+C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.exe
+C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.pdb
+C:\Users\Lane\WELSH\wash\bin\Debug\WELSH.exe.manifest
+C:\Users\Lane\WELSH\wash\bin\Debug\WELSH.application
+C:\Users\Lane\WELSH\wash\bin\Debug\WELSH.exe
+C:\Users\Lane\WELSH\wash\bin\Debug\WELSH.pdb
+C:\Users\Lane\WELSH\wash\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.TrustInfo.xml
+C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.exe.manifest
+C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.application

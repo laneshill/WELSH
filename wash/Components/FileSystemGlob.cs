@@ -120,8 +120,12 @@ namespace Wash.Components
             }
             catch (Exception e)
             {
-                Console.ForegroundColor = ConsoleColor.Red; 
-                Console.WriteLine(GSR.Listing[39]); 
+                Console.ForegroundColor = ConsoleColor.Red;
+                if(e.Message.Contains("denied"))
+                    Console.WriteLine(GSR.Listing[74]);
+                else
+                    Console.WriteLine(GSR.Listing[39]);
+
                 Console.ForegroundColor = ConsoleColor.Gray;
                 this.History.Remove(this.Current_Pointer);
                 this.HistoryPosition--;
