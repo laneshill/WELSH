@@ -169,7 +169,16 @@ namespace Wash.Components
         private static bool change_directory(CommandCard card, FileSystemGlob fsg, int deck_position)
         {
             string[] args = card.Arguments;
-            if (args.Length == 0) { Console.ForegroundColor = ConsoleColor.Cyan; Executer.output(card, GSR.Listing[45] + " " + fsg.Current_Pointer); Console.ForegroundColor = ConsoleColor.Cyan; return true; }
+            bool nonNarg = true;
+            foreach (string arg in args)
+            {
+                if (!arg.Equals(" "))
+                {
+                    nonNarg = false;
+                    break;
+                }
+            }
+            if (nonNarg) { Console.ForegroundColor = ConsoleColor.Cyan; Executer.output(card, GSR.Listing[45] + " " + fsg.Current_Pointer); Console.ForegroundColor = ConsoleColor.Cyan; return true; }
             string dir = "";
             //Checking if there is a space in the path.  Because we tokenized it, spaces are in a new part of args.
             if (args.Length > 1)

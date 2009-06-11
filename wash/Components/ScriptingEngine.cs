@@ -131,6 +131,15 @@ namespace Wash.Components
                     //do nothing but incremate.
                     i++;
                 }
+                else if (cmds.Contains("method"))
+                {
+                    while (!cmds.Contains("end"))
+                    {
+                        i++;
+                        cmds = Script_Array[i];
+                    }
+                    i++; //incremate one after end to avoid odd loop problems.
+                }
                 else
                 {
                     string[] commands = cmds.Trim().Split();
@@ -151,7 +160,7 @@ namespace Wash.Components
 
                 Pointer_Position = i;
                 }
-
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("-");
             }
         }
