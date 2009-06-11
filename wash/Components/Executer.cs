@@ -648,7 +648,9 @@ namespace Wash.Components
          */
         public static void process_list(CommandCard card)
         {
+            Console.ForegroundColor = ConsoleColor.Cyan;
             output(card, "Please note that you may need to log in as an administrator to see all processes.");
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Process[] plist = Process.GetProcesses();
            // Array.Sort<Process>(plist);
             List<string> naccess = new List<string>();
@@ -664,7 +666,7 @@ namespace Wash.Components
                         Console.ForegroundColor = ConsoleColor.DarkRed;
                     string str = p.Id + "  " + p.ProcessName + "   " + p.StartTime +"   " + p.VirtualMemorySize64 + "   " + p.WorkingSet64;
                     output(card, str);
-                    Console.ForegroundColor = ConsoleColor.Gray;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                 }
                 catch (Exception e) { naccess.Add(p.ProcessName); }
             }
@@ -677,7 +679,9 @@ namespace Wash.Components
             //       output(card, name);
             //   }
             // }
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
+       
 
         /**********************
          * kill_process
@@ -751,17 +755,32 @@ namespace Wash.Components
                     }
                     else if (System.IO.File.Exists(ftbr))
                     {
-
                         System.IO.File.Delete(ftbr);
                         fsg.changeLocation(fsg.Current_Pointer);  //updates current children.
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Executer.output(card, GSR.Listing[25]);
                     }
                     else
                     {
-                        System.IO.Directory.Delete(ftbr);
+                        string[] files = System.IO.Directory.GetFiles(ftbr);
+                        string[] folders = System.IO.Directory.GetFiles(ftbr);
+                        for(int i = 0; i < files.Length && i < folders.Length; i++)
+                        {
+                            if (fsg.Protected.Contains(files[i]) || fsg.Protected.Contains(folders[i]))
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Executer.output(card, GSR.Listing[29]);
+                                Console.ForegroundColor = ConsoleColor.Gray;
+                                return;
+                            }
+                        }
+                        System.IO.Directory.Delete(ftbr, true);
                         fsg.changeLocation(fsg.Current_Pointer); //updates current children.
+                        Console.ForegroundColor = ConsoleColor.Cyan;
+                        Executer.output(card, GSR.Listing[78]);
                     }
-                    Console.ForegroundColor = ConsoleColor.Cyan;
-                    Executer.output(card, GSR.Listing[25]);
+                    
+                    
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
                 catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[24] + e.Message); Console.ForegroundColor = ConsoleColor.Gray; }
