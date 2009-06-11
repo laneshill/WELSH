@@ -92,6 +92,7 @@ using System.Text;
 72: clock
 73: c
 74: Access to this directory is denied.
+75: Your calculation is malformed!  Make sure that each operator has two operands!
  */
 namespace Wash.Components
 {

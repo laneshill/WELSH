@@ -225,7 +225,7 @@ namespace Wash.Components
                             catch (Exception) { intvar.Remove(vari); intvar.Add(vari, (int)result); }
                             //the catch function removes the existing var
                         }
-                        else { Console.WriteLine(result); }
+                        else { if(!float.IsNaN(result)) Console.WriteLine(result); } 
                 }
                 else
                 {

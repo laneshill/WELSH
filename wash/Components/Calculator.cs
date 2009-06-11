@@ -65,64 +65,81 @@ namespace Wash.Components
             pf_exp = pf_exp.Trim(); //infix2Postfix function adds an empty space at the end.
             string[] pf_exp_arr = pf_exp.Split();
             float opd1, opd2, res;
-            for (int i = 0; i < pf_exp_arr.Length; i++)
+            float result = 0; //set result = ahead.
+            
+            try
             {
-                string c = pf_exp_arr[i];
-                switch (c)
+                for (int i = 0; i < pf_exp_arr.Length; i++)
                 {
-                    case ("+"): if (operands.Count != 0)
-                               {
-                                   opd1 = float.Parse(operands.Pop());
-                                   opd2 = float.Parse(operands.Pop());
-                                   res = opd1 + opd2;
-                                   operands.Push(res.ToString());
-                               }
-                        break;
-                    case ("-"): if (operands.Count != 0)
-                        {
-                             opd1 = float.Parse(operands.Pop());
-                             opd2 = float.Parse(operands.Pop());
-                              res = opd2 - opd1;
-                            operands.Push(res.ToString());
-                        }
-                        break;
-                    case ("*"): if (operands.Count != 0)
-                        {
-                            opd1 = float.Parse(operands.Pop());
-                            opd2 = float.Parse(operands.Pop());
-                            res = opd1 * opd2;
-                            operands.Push(res.ToString());
-                        }
-                        break;
-                    case ("/"): if (operands.Count != 0)
-                        {
-                            opd1 = float.Parse(operands.Pop());
-                            opd2 = float.Parse(operands.Pop());
-                            res = opd2/opd1;
-                            operands.Push(res.ToString());
-                        }
-                        break;
-                    case ("%"): if (operands.Count != 0)
-                        {
-                            opd1 = float.Parse(operands.Pop());
-                            opd2 = float.Parse(operands.Pop());
-                            res = opd2 % opd1;
-                            operands.Push(res.ToString());
-                        }
-                        break;
-                    default: float val;
-                        if (float.TryParse(c, out val))
-                        {
-                            operands.Push(c);
-                        }
-                        break;
+
+                    string c = pf_exp_arr[i];
+                    switch (c)
+                    {
+                        case ("+"): if (operands.Count != 0)
+                            {
+                                opd1 = float.Parse(operands.Pop());
+                                opd2 = float.Parse(operands.Pop());
+                                res = opd1 + opd2;
+                                operands.Push(res.ToString());
+                            }
+                            break;
+                        case ("-"): if (operands.Count != 0)
+                            {
+                                opd1 = float.Parse(operands.Pop());
+                                opd2 = float.Parse(operands.Pop());
+                                res = opd2 - opd1;
+                                operands.Push(res.ToString());
+                            }
+                            break;
+                        case ("*"): if (operands.Count != 0)
+                            {
+                                opd1 = float.Parse(operands.Pop());
+                                opd2 = float.Parse(operands.Pop());
+                                res = opd1 * opd2;
+                                operands.Push(res.ToString());
+                            }
+                            break;
+                        case ("/"): if (operands.Count != 0)
+                            {
+                                opd1 = float.Parse(operands.Pop());
+                                opd2 = float.Parse(operands.Pop());
+                                res = opd2 / opd1;
+                                operands.Push(res.ToString());
+                            }
+                            break;
+                        case ("%"): if (operands.Count != 0)
+                            {
+                                opd1 = float.Parse(operands.Pop());
+                                opd2 = float.Parse(operands.Pop());
+                                res = opd2 % opd1;
+                                operands.Push(res.ToString());
+                            }
+                            break;
+                        default: float val;
+                            if (float.TryParse(c, out val))
+                            {
+                                operands.Push(c);
+                            }
+                            break;
+
+                    }
 
                 }
+                result = float.Parse(operands.Pop());
+                return result;
+                
             }
-            float result = float.Parse(operands.Pop());
+            catch (Exception e)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(GSR.Listing[75]);
+                Console.ForegroundColor = ConsoleColor.Gray;
+                return float.NaN;
+            }
 
+            
 
-            return result;
+            
         }
 
         /*************

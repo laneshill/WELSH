@@ -73,3 +73,4 @@ t
 clock
 c
 Access to this directory is denied.  Have you tried running WELSH with administration rights?
+Your calculation is malformed!  Make sure that each operator has two operands!
