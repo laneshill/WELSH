@@ -280,7 +280,7 @@ namespace Wash.Components
                             write = System.IO.File.GetLastWriteTime(fil).ToString();
 
                         }
-                        catch (Exception e) { Executer.output(card, " "); return false; } //if a file doesn't like this - simply remove it from the list.  Most files that are like this are System-level files.
+                        catch (Exception e) { Executer.output(card, " "); } //if a file doesn't like this - simply remove it from the list.  Most files that are like this are System-level files.
                     }
                     if (Path.HasExtension(fsg.Current_Children[i]))
                     {
@@ -356,6 +356,13 @@ namespace Wash.Components
             string filter;
             string filtered = "";
             List<String> results = new List<String>();
+            if (card.Arguments.Length < 2)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(GSR.Listing[76]);
+                Console.ForegroundColor = ConsoleColor.Gray;
+                return;
+            }
             if (card.Arguments[0].Contains("\\")) //what to be filtered is in a file.
             {
                 using (System.IO.StreamReader sr = new StreamReader(card.Arguments[0]))
@@ -390,9 +397,16 @@ namespace Wash.Components
                 if (s.Contains(filter))
                     results.Add(s);
             }
+            if (results.Count == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine(GSR.Listing[77]);
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
             foreach (string s in results)
             {
                 Executer.output(card, s);
+              
             }
 
         }
@@ -449,12 +463,12 @@ namespace Wash.Components
                     if (sd.TryGetValue(variable, out outv))
                     {
                         validity = true;
-                        using (StreamWriter sw = new StreamWriter("Data/strvar")) { sw.WriteLine(variable + " " + outv.Trim()); }
+                        using (StreamWriter sw = File.AppendText("Data/strvar")) { sw.WriteLine(variable + " " + outv.Trim()); }
                     }
                     if (id.TryGetValue(variable, out i_outv))
                     {
                         validity = true;
-                        using (StreamWriter sw = new StreamWriter("Data/intvar")) { sw.WriteLine(variable + " " + i_outv); }
+                        using (StreamWriter sw = File.AppendText("Data/intvar")) { sw.WriteLine(variable + " " + i_outv); }
                     }
                     if (!validity) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(GSR.Listing[3] + " " + args[i] + " " + GSR.Listing[10]); Console.ForegroundColor = ConsoleColor.Gray; }
                     else
@@ -499,40 +513,41 @@ namespace Wash.Components
                 else { file = fil; }
 
                 Executer.output(card, GSR.Listing[13] + file);
-
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 try
                 {
                     attributes = System.IO.File.GetAttributes(file).ToString();
                     Executer.output(card, GSR.Listing[14] + attributes);
                 }
-                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[15]); Console.ForegroundColor = ConsoleColor.Gray; }
+                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[15]); Console.ForegroundColor = ConsoleColor.Yellow; }
 
                 try
                 {
                     control = System.IO.File.GetAccessControl(file).ToString();
                     Executer.output(card, GSR.Listing[16] + control);
                 }
-                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[17]); Console.ForegroundColor = ConsoleColor.Gray; }
+                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[17]); Console.ForegroundColor = ConsoleColor.Yellow; }
 
                 try
                 {
                     access = System.IO.File.GetLastAccessTime(file).ToString();
                     Executer.output(card, GSR.Listing[18] + access);
                 }
-                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[19]); Console.ForegroundColor = ConsoleColor.Gray; }
+                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[19]); Console.ForegroundColor = ConsoleColor.Yellow; }
 
                 try { write = System.IO.File.GetLastWriteTime(file).ToString(); Executer.output(card, GSR.Listing[20] + write); }
-                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[21]); Console.ForegroundColor = ConsoleColor.Gray; }
+                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[21]); Console.ForegroundColor = ConsoleColor.Yellow; }
 
                 try
                 {
                     creation = System.IO.File.GetCreationTime(file).ToString();
                     Executer.output(card, GSR.Listing[22] + creation);
                 }
-                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[23]); Console.ForegroundColor = ConsoleColor.Gray; }
+                catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Executer.output(card, GSR.Listing[23]); Console.ForegroundColor = ConsoleColor.Yellow; }
 
 
                 Executer.output(card, " ");
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
 
 

@@ -74,3 +74,5 @@ clock
 c
 Access to this directory is denied.  Have you tried running WELSH with administration rights?
 Your calculation is malformed!  Make sure that each operator has two operands!
+Your filter query is malformed.  The correct syntax is: filter <what to be filtered> <list of filtered, sperated by spaces>.
+The element has not been found.
