@@ -1163,6 +1163,8 @@ namespace Wash.Components
                 Console.WriteLine(GSR.Listing[1] + e.Message);
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
+
+            fsg.changeLocation(fsg.Current_Pointer); //re-get the children of pointer.
         }
 
         /*****************
