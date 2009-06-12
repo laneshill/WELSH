@@ -62,14 +62,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WELSH.exe" size="126464">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WELSH.exe" size="126976">
       <assemblyIdentity name="WELSH" version="0.0.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>QWH0pnNLNYt6PBTd90PkVevyqTs=</dsig:DigestValue>
+        <dsig:DigestValue>a4rB6ZDtOojBLNvA7Rx5Cqjn4Og=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -170,6 +170,7 @@ namespace Wash.Components
         {
             string[] args = card.Arguments;
             bool nonNarg = true;
+            string suffix = "\\";
             foreach (string arg in args)
             {
                 if (!arg.Equals(" "))
@@ -198,12 +199,23 @@ namespace Wash.Components
             }
             if (!dir.Contains(":\\")) //Folder is not root.  Important, because it allows us not to worry about having slashes at the beginning of relative roots.
             {
-                dir = fsg.Current_Pointer + dir + "\\";
+                dir = fsg.Current_Pointer + dir;
             }
             if (args[0].Equals("..")) //we are supposed to go up one level.
             {
+                if (fsg.Current_Pointer.EndsWith("\\"))
+                {
+                    try
+                    {
+                        fsg.Current_Pointer = fsg.Current_Pointer.Remove(fsg.Current_Pointer.Length-1);
+                    }
+                    catch (Exception)
+                    {
+                        //Do nothing yet.
+                    }
+                }
                 dir = System.IO.Path.GetDirectoryName(fsg.Current_Pointer);
-                if (dir.Equals("")) //GetDirectoryName returns an empty value string when you are a level away from the root.
+                if (String.IsNullOrEmpty(dir)) //GetDirectoryName returns an empty value string when you are a level away from the root.
                 {
                     dir = System.IO.Path.GetPathRoot(fsg.Current_Pointer);
                 }
@@ -215,8 +227,11 @@ namespace Wash.Components
                 //has spaces.
                 dir = deck[deck_position - 1].Output;
             }
+            if (dir.EndsWith(":\\"))
+                suffix = "";
 
-            bool check = fsg.changeLocation(dir);
+
+            bool check = fsg.changeLocation(dir + suffix);
             return check;
         }
 
@@ -1151,8 +1166,11 @@ namespace Wash.Components
                     to_file = fsg.Current_Pointer + to_file;
                 }
 
-                File.Move(file, to_file);
-                File.Delete(file); //get rid of the file.
+                Directory.Move(file, to_file);
+               // if (file.Contains("."))
+               //     File.Delete(file);
+              //  else
+             //       Directory.Delete(file); //get rid of the file.
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Executer.output(card, GSR.Listing[52]);
                 Console.ForegroundColor = ConsoleColor.Gray;
