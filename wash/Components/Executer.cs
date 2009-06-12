@@ -298,7 +298,12 @@ namespace Wash.Components
                             Console.ForegroundColor = ConsoleColor.Red;
                     }
                     else
-                        Console.ForegroundColor = ConsoleColor.Yellow;
+                    {
+                        if (System.IO.Directory.Exists(fsg.Current_Pointer + fsg.Current_Children[i]))
+                            Console.ForegroundColor = ConsoleColor.Green;
+                        else
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                    }
                     
                     Executer.output(card, fsg.Current_Children[i]);
                     Console.ForegroundColor = ConsoleColor.Gray;
