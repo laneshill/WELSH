@@ -1053,14 +1053,14 @@ namespace Wash.Components
                 }
                 else { p = arg; }
 
-                string title = Path.GetDirectoryName(p) + GSR.Listing[37] + System.IO.Path.GetFileNameWithoutExtension(p) + " " + rg.Next(1000) + Path.GetExtension(p);
-                Console.WriteLine(title);
+                string title = Path.GetDirectoryName(p) + "\\"+ GSR.Listing[37] + System.IO.Path.GetFileNameWithoutExtension(p) + " " + rg.Next(1000) + Path.GetExtension(p);
+                
                 try
                 {
                     File.Copy(p, title);
                     fsg.changeLocation(fsg.Current_Pointer);
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine(GSR.Listing[38]);
+                    Console.WriteLine(GSR.Listing[38] + "-" + title);
                     Console.ForegroundColor = ConsoleColor.Gray;
                 }
                 catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(e.Message); Console.ForegroundColor = ConsoleColor.Gray; }
