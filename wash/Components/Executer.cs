@@ -1178,7 +1178,7 @@ namespace Wash.Components
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine(GSR.Listing[1] + e.Message);
+                Console.WriteLine(GSR.Listing[1] + e.Message +"-" + GSR.Listing[79]);
                 Console.ForegroundColor = ConsoleColor.Gray;
             }
 

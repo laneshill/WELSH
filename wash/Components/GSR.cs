@@ -95,7 +95,8 @@ using System.Text;
 75: Your calculation is malformed!  Make sure that each operator has two operands!
 76: Your filter query is malformed.  The correct syntax is: filter <what to be filtered> <list of filtered, seperated by spaces or commas.
 77: The element has not been found.
-78: The folder was deleted successfully.
+78: The folder was deleted successfully.\
+79: Try specifying the name of the moved file or folder.
  */
 namespace Wash.Components
 {
