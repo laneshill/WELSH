@@ -98,6 +98,7 @@ using System.Text;
 78: The folder was deleted successfully.\
 79: Try specifying the name of the moved file or folder.
 80: If you are using quotes, make sure you have only two quotes.
+81: File or folder not found.  Double check your spelling, and try again.
  */
 namespace Wash.Components
 {

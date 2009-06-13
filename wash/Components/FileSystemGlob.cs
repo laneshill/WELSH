@@ -121,8 +121,10 @@ namespace Wash.Components
             catch (Exception e)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                if(e.Message.Contains("denied"))
+                if (e.Message.Contains("denied"))
                     Console.WriteLine(GSR.Listing[74]);
+                else if (e.Message.Contains("not find"))
+                    Console.WriteLine(GSR.Listing[81]);
                 else
                     Console.WriteLine(GSR.Listing[39]);
 
