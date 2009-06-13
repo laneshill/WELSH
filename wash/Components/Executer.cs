@@ -227,7 +227,7 @@ namespace Wash.Components
                 //has spaces.
                 dir = deck[deck_position - 1].Output;
             }
-            if (dir.EndsWith(":\\"))
+            if (dir.EndsWith(":\\") || dir.EndsWith("\\"))
                 suffix = "";
 
 
