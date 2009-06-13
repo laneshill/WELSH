@@ -17,7 +17,7 @@ using System.Text;
  * getString 
  * 
  * Listing of Strings:
- * 0:WELSH:Windows Easy-Language Shell 1.0 BETA
+ * 0:WELSH:Windows Easy-Language Shell 1.3
 1:Error:
 2:Format mismatch!  Make sure you're not putting alphabetical characters in integer variables!
 3:Variable
@@ -97,6 +97,7 @@ using System.Text;
 77: The element has not been found.
 78: The folder was deleted successfully.\
 79: Try specifying the name of the moved file or folder.
+80: If you are using quotes, make sure you have only two quotes.
  */
 namespace Wash.Components
 {

@@ -78,3 +78,4 @@ Your filter query is malformed.  The correct syntax is: filter <what to be filte
 The element has not been found.
 The folder was deleted successfully.
 Try specifying the name of the moved file or folder.
+If you are using quotes, make sure that there are two quotes!

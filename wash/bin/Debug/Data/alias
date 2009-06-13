@@ -32,7 +32,7 @@ clear cls cl 1 clr
 view look_at see 1 view
 filter filter_out f 1 filter
 explore exp e 1 explore
-move mov m 1 move
+move mov mv 1 move
 rename ren r 1 move
 protect prot secure 1 protect
 google net_search_for g 1 google
@@ -44,5 +44,3 @@ print echo cout 1 echo
 time clock t 1 time
 c cl ti 1 time
 date da d 1 time
-opera web internet 0 C:\Program Files (x86)\Opera\opera.exe
-Zune music mp3 0 C:\Program Files\Zune\Zune.exe

@@ -281,7 +281,16 @@ namespace Wash.Components
                                             else { break; }
                                             if (j > 100) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(GSR.Listing[24]); Console.ForegroundColor = ConsoleColor.Gray; return dft; } //Format mismatch.
                                         }
-                                        new_arg = new_arg + " " + parsed[i+1].Substring(0, parsed[i+1].Length - 1);
+                                        try
+                                        {
+                                            new_arg = new_arg + " " + parsed[i + 1].Substring(0, parsed[i + 1].Length - 1);
+                                        }
+                                        catch (Exception e)
+                                        {
+                                            Console.ForegroundColor = ConsoleColor.Magenta;
+                                            Console.WriteLine(GSR.Listing[80]);
+                                            Console.ForegroundColor = ConsoleColor.Gray;
+                                        }
                                         arg.Add(new_arg);
                                         i=i+2;
                                     }
