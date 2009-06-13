@@ -303,7 +303,7 @@ namespace Wash.Components
                             Console.ForegroundColor = ConsoleColor.White;
                         else if (fsg.Current_Children[i].Contains(".htm") || fsg.Current_Children[i].Contains(".xml") || fsg.Current_Children[i].Contains(".rb") || fsg.Current_Children[i].Contains(".php"))
                             Console.ForegroundColor = ConsoleColor.Blue;
-                        else if (fsg.Current_Children[i].Contains(".mp") || fsg.Current_Children[i].Contains(".ogg") || fsg.Current_Children[i].Contains(".mov") || fsg.Current_Children[i].Contains(".wm") || fsg.Current_Children[i].Contains(".flac") || fsg.Current_Children[i].Contains(".aac"))
+                        else if (fsg.Current_Children[i].Contains(".mp3") || fsg.Current_Children[i].Contains(".ogg") || fsg.Current_Children[i].Contains(".mov") || fsg.Current_Children[i].Contains(".wm") || fsg.Current_Children[i].Contains(".flac") || fsg.Current_Children[i].Contains(".aac"))
                             Console.ForegroundColor = ConsoleColor.Magenta;
                         else if (fsg.Current_Children[i].Contains(".cpp") || fsg.Current_Children[i].Contains(".java") || fsg.Current_Children[i].Contains(".h") || fsg.Current_Children[i].Contains(".c") || fsg.Current_Children[i].Contains(".bat") || fsg.Current_Children[i].Contains(".wis") || fsg.Current_Children[i].Contains(".cs") || fsg.Current_Children[i].Contains(".class"))
                             Console.ForegroundColor = ConsoleColor.DarkBlue;

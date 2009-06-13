@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly manifestVersion="1.0" xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1">
-  <asmv1:assemblyIdentity version="0.9.0.1" name="WELSH.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity version="1.3.0.1" name="WELSH.exe" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="My-PC.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="WELSH" version="0.0.0.5" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="WELSH" version="1.3.0.5" language="neutral" processorArchitecture="msil" />
     <commandLine file="WELSH.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -63,13 +63,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WELSH.exe" size="126976">
-      <assemblyIdentity name="WELSH" version="0.0.0.5" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="WELSH" version="1.3.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>VA4Eo4XSsUb7UPo6ACoRqtyy1yE=</dsig:DigestValue>
+        <dsig:DigestValue>YZyvv9sGLOGCHkzX1UEvDDhy7qo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
