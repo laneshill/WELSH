@@ -60,6 +60,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -70,6 +71,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Applets\ChangeDirectory.cs" />
+    <Compile Include="Applets\Echoer.cs" />
+    <Compile Include="Applets\Filterer.cs" />
+    <Compile Include="Applets\NavigationOps.cs" />
+    <Compile Include="Applets\FileOps.cs" />
+    <Compile Include="Applets\NetOps.cs" />
+    <Compile Include="Applets\ProcessOps.cs" />
+    <Compile Include="Applets\VariableOps.cs" />
+    <Compile Include="Applets\DirectoryLister.cs" />
+    <Compile Include="Applets\FileViewer.cs" />
+    <Compile Include="Applets\Watch.cs" />
     <Compile Include="Components\ScriptingEngine.cs" />
     <Compile Include="Components\AliasEntry.cs" />
     <Compile Include="Components\AliasMode.cs" />
@@ -79,6 +91,12 @@
     <Compile Include="Components\Executer.cs" />
     <Compile Include="Components\FileSystemGlob.cs" />
     <Compile Include="Components\GSR.cs" />
+    <Compile Include="Components\Settings1.cs" />
+    <Compile Include="Components\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -95,6 +113,11 @@
     <None Include="Data\strings" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Components\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Data\protected" />
     <None Include="Properties\app.manifest" />
     <None Include="WELSH_TemporaryKey.pfx" />

@@ -62,14 +62,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WELSH.exe" size="126976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WELSH.exe" size="133632">
       <assemblyIdentity name="WELSH" version="1.3.0.5" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>YZyvv9sGLOGCHkzX1UEvDDhy7qo=</dsig:DigestValue>
+        <dsig:DigestValue>Q/WoLdnCHG/QrEEPW/93UsUbaNk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -80,6 +80,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>4D/j6/cdz+HrL/ICtICyoHbq25g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="WELSH.exe.config" size="2403">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>Ovwk4UTyFPIJXcIRNvROYpS93CA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

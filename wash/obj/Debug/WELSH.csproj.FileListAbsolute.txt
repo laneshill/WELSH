@@ -50,3 +50,4 @@ C:\Users\Lane\WELSH\wash\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.TrustInfo.xml
 C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.exe.manifest
 C:\Users\Lane\WELSH\wash\obj\Debug\WELSH.application
+C:\Users\Lane\WELSH\wash\bin\Debug\WELSH.exe.config
