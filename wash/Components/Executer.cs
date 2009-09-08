@@ -99,7 +99,7 @@ namespace Wash.Components
                         break; //create a new folder or file
                     case "add": FileOps.addTo(cards[i], fsg, i);
                         break; //add a text to a file.
-                    case "conf": break; //look at and edit the configuration file.
+                    case "conf": Configuration.run(cards[i]); break; //look at and edit the configuration file.
                    
                     case "exec": FileOps.executeScript(cards[i], fsg, at, id, sd);
                         break; //execute a script.

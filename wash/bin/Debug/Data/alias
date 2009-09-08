@@ -44,3 +44,4 @@ print echo cout 1 echo
 time clock t 1 time
 c cl ti 1 time
 date da d 1 time
+conf c configure 1 conf

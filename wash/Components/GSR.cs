@@ -99,6 +99,19 @@ using System.Text;
 79: Try specifying the name of the moved file or folder.
 80: If you are using quotes, make sure you have only two quotes.
 81: File or folder not found.  Double check your spelling, and try again.
+82: Password protection
+83: Welcome to the WELSH Configurer.  If you don't want to configure this option, just press Enter.
+84: (1/9) What is the path to your Home Directory?
+85: (2/9) When you run the command to change directory without any arguments, what is the result you want? Options: dos (display current path), root (go to C:\) or home (go to your home directory).
+86: (3/9) Do you want to password protect WELSH? Options: Yes, No
+87: (4/9) What password do you want to use?
+88: (5/9) If there is a script that you want to start when WELSH launches, what is the path to the script?
+89: (6/9) Do you want a colorful experience, or just gray on a black background?
+90: (7/9) What color do you want the background to be? (Options: black, white, yellow, blue, red, gray, dark gray, green and magenta)
+91: (8/9) What color do you want the text to be? (Options: black, white, yellow, blue, red, gray, dark gray, green and magenta)
+92: (9/9) Do you want a time stamp with the prompt? 
+93: That's not a correct response.
+ * 94: Your configuration settings have been saved.
  */
 namespace Wash.Components
 {

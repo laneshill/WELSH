@@ -68,6 +68,7 @@ namespace Wash //Namespace is Wash because that was the original name: Windows A
          */
         static void Main(string[] args)
         {   //Create the global string resource.
+            Console.BackgroundColor = Settings1.Default.backgroundColor;
             try
             {
                 StreamReader sr = new StreamReader("Data/strings");
@@ -85,13 +86,26 @@ namespace Wash //Namespace is Wash because that was the original name: Windows A
             LoadVariables(intvart, strvart);
             AliasTable at = new AliasTable();
             FileSystemGlob fsg = new FileSystemGlob();
+            if (Settings1.Default.passwordProtect)
+            {
+                Console.WriteLine(GSR.Listing[82]);
+                String pass = Console.ReadLine();
+                if (!Settings1.Default.password.Equals(pass))
+                    return;
+            }
             Console.WriteLine(GSR.Listing[0]); //WELSH INFORMATION
            // Console.WriteLine("Created by Lane S. Hill");
             while (true)
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
+                
+                if (Settings1.Default.promptTime)
+                {
+                    Console.Write("[" + DateTime.Now.Hour.ToString() + ":" + DateTime.Now.Minute.ToString() + ":" + DateTime.Now.Second.ToString() + "]");
+
+                }
+                if(!Settings1.Default.cmdMode)Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write(fsg.Current_Pointer);
-                Console.ForegroundColor = ConsoleColor.Gray;
+                if(!Settings1.Default.cmdMode)Console.ForegroundColor = Settings1.Default.foregroundColor;
                 Console.Write(">");
                 String tok = Console.ReadLine();
                     String[] toks = tok.Split(); //splits the string as spaces the delimitator.
@@ -103,9 +117,9 @@ namespace Wash //Namespace is Wash because that was the original name: Windows A
                     CommandCard[] deck = CommandCard.createDeck(toks, fsg, at, intvart, strvart);
                     if (deck == null)
                     {
-                       Console.ForegroundColor = ConsoleColor.Red;
+                       if(!Settings1.Default.cmdMode)Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine(GSR.Listing[9]); //this is the Command Not Found error.
-                       Console.ForegroundColor = ConsoleColor.Gray;
+                        if (!Settings1.Default.cmdMode) Console.ForegroundColor = Settings1.Default.foregroundColor;
                     }
                     else
                     {

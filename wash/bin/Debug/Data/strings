@@ -80,3 +80,16 @@ The folder was deleted successfully.
 Try specifying the name of the moved file or folder.
 If you are using quotes, make sure that there are two quotes!  Also, only use quotes when there is a space in what you are typing in!  For instance, "time to" should have quotes, but "lemonade" is wrong!
 File or folder not found.  Double check your spelling, and try again.
+This instance of WELSH is password protected.  Please enter the password.
+Welcome to the WELSH Configurer Beta.  If you don't want to configure the current option, just press Enter.  Please note that this will not work for the "color" options.
+(1/9) What is the path to your Home Directory?
+(2/9) When you run the command to change directory without any arguments, what is the result you want? Options: dos (display current path), root (go to C:\) or home (go to your home directory).
+(3/9) Do you want to password protect WELSH? Options: Yes, No
+(4/9) What password do you want to use?  BE SURE TO WRITE IT DOWN!
+(5/9) If there is a script that you want to start when WELSH launches, what is the path to the script?
+(6/9) Do you want a colorful experience?
+(7/9) What color do you want the background to be? (Options: red, blue, yellow, gray,cyan, green, magenta, white, black)
+(8/9) What color do you want the text to be? (Options: red, blue, yellow, gray,cyan, green, magenta, white, black)
+(9/9) Do you want a time stamp with the prompt? (Options yes, no)
+That's not a correct response.
+Your configuration settings have been saved.

@@ -68,7 +68,7 @@ namespace Wash.Components
         //constructor is also in charge of adding the Protected list.
         public FileSystemGlob()
         {
-            this.changeLocation("C:\\");
+            this.changeLocation(Settings1.Default.startDirectory);
             //now we populate the protected list.
             using(System.IO.StreamReader sr = new System.IO.StreamReader("Data/protected"))
             {

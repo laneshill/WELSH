@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Applets\ChangeDirectory.cs" />
+    <Compile Include="Applets\Configuration.cs" />
     <Compile Include="Applets\Echoer.cs" />
     <Compile Include="Applets\Filterer.cs" />
     <Compile Include="Applets\NavigationOps.cs" />
