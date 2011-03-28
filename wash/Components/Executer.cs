@@ -76,6 +76,8 @@ namespace Wash.Components
          * Accepts a deck of CommandCards, the AliasTable, the FileSystemGlob, the two variable dictionaries.
          * 
          * Executes a built in method based on the command on the CommandCard.
+	 *
+	 * The 2.0 code is very better; will update soon!
          */
         public static void execute(CommandCard[] cards, AliasTable at, FileSystemGlob fsg, Dictionary<string, string> sd, Dictionary<string, float> id)
         {

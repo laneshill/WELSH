@@ -22,7 +22,7 @@ namespace Wash.Components
      * get/set
      * search - searches the table for a string, returns the AE.
      * 
-     * 
+     *COMMENTS COMMENTS COMMENTS COMMENTS TEST 
      */
     class AliasTable
     {
@@ -32,6 +32,7 @@ namespace Wash.Components
             get { return array; }
             set { array = value; }
         }
+	private int uselessOpinion=0;
         public int count
         {
             get{return array.Count;} //so we don't have to call array.Count everytime we want the count of the table.
