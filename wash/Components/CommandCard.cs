@@ -167,31 +167,9 @@ namespace Wash.Components
             }
             else if (parsed[0].Contains("@")) //check if the command entered was a variable declaration in the form of @string = var.
             {
-                string variable = parsed[0].Substring(1);
-                if (parsed.Length >= 3)
-                {
-                    string str = "";
-                    for (int j = 2; j < parsed.Length; j++) //this will break things in the future, probably.
-                    {
-                        str = str + " " + parsed[j]; //connect strings that might've had spaces, which would break up the string.
-                    }
-                    try { strvar.Add(variable, str); }
-                    //if there is a variable already declared, we simply remove it, and add it again.
-                    catch (Exception) { strvar.Remove(variable); strvar.Add(variable, str); }
-                }
-                else if (parsed.Length == 1)//if they typed in the name of the variable, we return the value of the variable.
-                {
-                    string value;
-                    if (strvar.TryGetValue(variable, out value))
-                    {
-                        Console.WriteLine(value.Trim());
-                    }
-                    else { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(GSR.Listing[3] + " " + variable + " " + GSR.Listing[4]); Console.ForegroundColor = ConsoleColor.Gray; } //Listing[3] and Listing[4] represent the variable declaration error.
-                }
-                //dft[0].Command = "l0";
-            }
-                else if (parsed.Contains("="))
-                {
+             //blah i am stupid coder
+		    string variable = parsed[0].Substring(1);
+              
                     string left_variable = "";
                     //replace all integer variables
                     for (int ci = 0; ci < parsed.Length; ci++)
